@@ -58,7 +58,12 @@ ninja -C build
 DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
 
 %files
+%{_libdir}/plugins/katepart.so
+%{_sysconfdir}/xdg/kate*
+%{_datadir}/katepart
+%{_datadir}/katepart5
 %{_datadir}/kservices5/*
+%{_datadir}/kservicetypes5/*
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}
