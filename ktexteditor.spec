@@ -3,10 +3,10 @@
 %define devname %mklibname KF5Texteditor -d
 %define debug_package %{nil}
 
-Name: ktexteditor
+Name: ktexteditor5
 Version: 4.99.0
 Release: 1
-Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/%{name}-%{version}.tar.xz
+Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/ktexteditor-%{version}.tar.xz
 Summary: Advanced embeddable text editor
 URL: http://kde.org/
 License: GPL
@@ -48,7 +48,7 @@ Requires: %{libname} = %{EVRD}
 Development files for the KDE Frameworks 5 Texteditor library
 
 %prep
-%setup -q
+%setup -qn ktexteditor-%{version}
 %cmake -G Ninja
 
 %build
