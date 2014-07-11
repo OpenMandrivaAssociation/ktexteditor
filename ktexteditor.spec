@@ -5,7 +5,7 @@
 
 Name: ktexteditor5
 Version: 4.99.0
-Release: 2
+Release: 3
 Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/ktexteditor-%{version}.tar.xz
 Summary: Advanced embeddable text editor
 URL: http://kde.org/
