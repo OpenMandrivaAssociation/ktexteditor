@@ -4,9 +4,9 @@
 %define debug_package %{nil}
 
 Name: ktexteditor5
-Version: 4.99.0
-Release: 3
-Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/ktexteditor-%{version}.tar.xz
+Version: 5.0.0
+Release: 1
+Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/frameworks/%{version}/ktexteditor-%{version}.tar.xz
 Summary: Advanced embeddable text editor
 URL: http://kde.org/
 License: GPL
@@ -56,9 +56,10 @@ ninja -C build
 
 %install
 DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
+%find_lang %{name}
 
-%files
-%{_libdir}/plugins/katepart.so
+%files -f %{name}.lang
+%{_libdir}/plugins/kf5/parts/katepart.so
 %{_sysconfdir}/xdg/kate*
 %{_datadir}/katepart
 %{_datadir}/katepart5
