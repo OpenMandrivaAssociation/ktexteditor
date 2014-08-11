@@ -4,7 +4,7 @@
 %define debug_package %{nil}
 
 Name: ktexteditor5
-Version: 5.0.0
+Version: 5.1.0
 Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/frameworks/%{version}/ktexteditor-%{version}.tar.xz
 Summary: Advanced embeddable text editor
@@ -25,6 +25,7 @@ BuildRequires: cmake(KF5I18n)
 BuildRequires: cmake(KF5KIO)
 BuildRequires: cmake(KF5Parts)
 BuildRequires: cmake(KF5Sonnet)
+BuildRequires: cmake(KF5XmlGui)
 BuildRequires: ninja
 Requires: %{libname} = %{EVRD}
 
@@ -61,8 +62,8 @@ DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
 %files -f %{name}.lang
 %{_libdir}/plugins/kf5/parts/katepart.so
 %{_sysconfdir}/xdg/kate*
-%{_datadir}/katepart
 %{_datadir}/katepart5
+%{_datadir}/kxmlgui5/katepart
 %{_datadir}/kservices5/*
 %{_datadir}/kservicetypes5/*
 
