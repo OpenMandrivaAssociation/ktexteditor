@@ -51,17 +51,18 @@ Development files for the KDE Frameworks 5 Texteditor library
 
 %prep
 %setup -qn ktexteditor-%{version}
-%cmake -G Ninja
+%cmake -G Ninja \
+	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %build
 ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
+DESTDIR="%{buildroot}" ninja -C build install
 %find_lang %{name}
 
 %files -f %{name}.lang
-%{_libdir}/plugins/kf5/parts/katepart.so
+%{_libdir}/qt5/plugins/kf5/parts/katepart.so
 %{_sysconfdir}/xdg/kate*
 %{_datadir}/katepart5
 %{_datadir}/kxmlgui5/katepart
@@ -76,4 +77,4 @@ DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/cmake/KF5*
-%{_prefix}/mkspecs/*
+%{_libdir}/qt5/mkspecs/modules/*
