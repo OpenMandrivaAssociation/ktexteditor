@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: ktexteditor5
-Version: 5.7.0
+Version: 5.8.0
 Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/ktexteditor-%{version}.tar.xz
 Summary: Advanced embeddable text editor
@@ -33,7 +33,7 @@ BuildRequires: ninja
 Requires: %{libname} = %{EVRD}
 
 %description
-Advanced embeddable text editor
+Advanced embeddable text editor.
 
 %package -n %{libname}
 Summary: Advanced embeddable text editor
@@ -41,7 +41,7 @@ Group: System/Libraries
 Requires: %{name} = %{EVRD}
 
 %description -n %{libname}
-Advanced embeddable text editor
+Advanced embeddable text editor.
 
 %package -n %{devname}
 Summary: Development files for the KDE Frameworks 5 Texteditor library
@@ -49,7 +49,7 @@ Group: Development/KDE and Qt
 Requires: %{libname} = %{EVRD}
 
 %description -n %{devname}
-Development files for the KDE Frameworks 5 Texteditor library
+Development files for the KDE Frameworks 5 Texteditor library.
 
 %prep
 %setup -qn ktexteditor-%{version}
