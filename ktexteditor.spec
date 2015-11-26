@@ -63,9 +63,7 @@ Development files for the KDE Frameworks 5 Texteditor library.
 
 %files -f %{name}.lang
 %{_libdir}/qt5/plugins/kf5/parts/katepart.so
-%{_sysconfdir}/xdg/kate*
 %{_datadir}/katepart5
-%{_datadir}/kxmlgui5/katepart
 %{_datadir}/kservices5/*
 %{_datadir}/kservicetypes5/*
 
