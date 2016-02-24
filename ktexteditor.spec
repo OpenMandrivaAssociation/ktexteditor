@@ -60,7 +60,7 @@ Development files for the KDE Frameworks 5 Texteditor library.
 %install
 %ninja_install -C build
 
-%find_lang %{name}
+%find_lang %{name}5
 
 %files -f %{name}.lang
 %{_libdir}/qt5/plugins/kf5/parts/katepart.so
