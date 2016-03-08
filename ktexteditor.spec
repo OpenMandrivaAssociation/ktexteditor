@@ -5,9 +5,9 @@
 %define _disable_lto 1
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
-Name: ktexteditor
+Name: ktexteditor5
 Version: 5.19.0
-Release: 3
+Release: 4
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: Advanced embeddable text editor
 URL: http://kde.org/
@@ -28,7 +28,6 @@ BuildRequires: cmake(KF5KIO)
 BuildRequires: cmake(KF5Parts)
 BuildRequires: cmake(KF5Sonnet)
 BuildRequires: cmake(KF5XmlGui)
-%rename ktexteditor5
 
 %description
 Advanced embeddable text editor.
@@ -59,7 +58,7 @@ Development files for the KDE Frameworks 5 Texteditor library.
 %install
 %ninja_install -C build
 
-%find_lang %{name}5
+%find_lang %{name}
 
 %files -f %{name}5.lang
 %{_libdir}/qt5/plugins/kf5/parts/katepart.so
