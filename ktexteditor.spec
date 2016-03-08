@@ -8,7 +8,7 @@
 Name: ktexteditor5
 Version: 5.19.0
 Release: 4
-Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
+Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/ktexteditor-%{version}.tar.xz
 Summary: Advanced embeddable text editor
 URL: http://kde.org/
 License: GPL
@@ -49,7 +49,7 @@ Requires: %{libname} = %{EVRD}
 Development files for the KDE Frameworks 5 Texteditor library.
 
 %prep
-%setup -q
+%setup -qn ktexteditor-%{version}
 %cmake_kde5
 
 %build
