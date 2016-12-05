@@ -1,4 +1,2 @@
-removed_sources:
-  ktexteditor-5.13.0.tar.xz: b6fc7e34248b6b680d206a7ad0b4918b7bf8455c
 sources:
-  ktexteditor-5.28.0.tar.xz: 991c1c6a4023380e760ee28fc6642efae772b8e8
+  ktexteditor-5.29.0.tar.xz: 0602833b1ebd5a604924419c37bd84f3fceadf2f
