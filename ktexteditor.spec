@@ -14,6 +14,7 @@ URL: http://kde.org/
 License: GPL
 Group: System/Libraries
 BuildRequires: pkgconfig(Qt5Core)
+BuildRequires: pkgconfig(Qt5Qml)
 BuildRequires: pkgconfig(Qt5Script)
 BuildRequires: pkgconfig(Qt5XmlPatterns)
 BuildRequires: pkgconfig(Qt5Test)
