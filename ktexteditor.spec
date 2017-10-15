@@ -7,7 +7,7 @@
 
 Name: ktexteditor5
 Version: 5.38.0
-Release: 1
+Release: 2
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/ktexteditor-%{version}.tar.xz
 Summary: Advanced embeddable text editor
 URL: http://kde.org/
@@ -18,7 +18,7 @@ BuildRequires: pkgconfig(Qt5Qml)
 BuildRequires: pkgconfig(Qt5Script)
 BuildRequires: pkgconfig(Qt5XmlPatterns)
 BuildRequires: pkgconfig(Qt5Test)
-BuildRequires: pkgconfig(libgit2)
+BuildRequires: pkgconfig(libgit2) >= 0.26.0
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(KF5Archive)
