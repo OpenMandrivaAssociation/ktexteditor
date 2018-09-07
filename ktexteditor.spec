@@ -47,6 +47,7 @@ Advanced embeddable text editor.
 Summary: Development files for the KDE Frameworks 5 Texteditor library
 Group: Development/KDE and Qt
 Requires: %{libname} = %{EVRD}
+Requires: cmake(KF5Parts)
 
 %description -n %{devname}
 Development files for the KDE Frameworks 5 Texteditor library.
