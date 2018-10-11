@@ -6,8 +6,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: ktexteditor5
-Version: 5.50.0
-Release: 2
+Version: 5.51.0
+Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/ktexteditor-%{version}.tar.xz
 Summary: Advanced embeddable text editor
 URL: http://kde.org/
@@ -65,6 +65,7 @@ Development files for the KDE Frameworks 5 Texteditor library.
 %find_lang %{name}
 
 %files -f %{name}.lang
+%{_sysconfdir}/xdg/ktexteditor.categories
 %{_libdir}/qt5/plugins/kf5/parts/katepart.so
 %{_datadir}/katepart5
 %{_datadir}/kservices5/*
