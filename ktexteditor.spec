@@ -1,13 +1,12 @@
 %define major 5
 %define libname %mklibname KF5Texteditor %{major}
 %define devname %mklibname KF5Texteditor -d
-%define debug_package %{nil}
-%define _disable_lto 1
+#define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: ktexteditor5
-Version: 5.56.0
-Release: 2
+Version: 5.57.0
+Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/ktexteditor-%{version}.tar.xz
 Summary: Advanced embeddable text editor
 URL: http://kde.org/
@@ -31,6 +30,8 @@ BuildRequires: cmake(KF5Parts)
 BuildRequires: cmake(KF5Sonnet)
 BuildRequires: cmake(KF5XmlGui)
 BuildRequires: cmake(KF5SyntaxHighlighting)
+# For QCH format docs
+BuildRequires: qt5-assistant
 
 %description
 Advanced embeddable text editor.
@@ -51,6 +52,14 @@ Requires: cmake(KF5Parts)
 
 %description -n %{devname}
 Development files for the KDE Frameworks 5 Texteditor library.
+
+%package -n %{name}-devel-docs
+Summary: Developer documentation for %{name} for use with Qt Assistant
+Group: Documentation
+Suggests: %{devname} = %{EVRD}
+
+%description -n %{name}-devel-docs
+Developer documentation for %{name} for use with Qt Assistant
 
 %prep
 %setup -qn ktexteditor-%{version}
@@ -85,3 +94,6 @@ Development files for the KDE Frameworks 5 Texteditor library.
 %{_libdir}/*.so
 %{_libdir}/cmake/KF5*
 %{_libdir}/qt5/mkspecs/modules/*
+
+%files -n %{name}-devel-docs
+%{_docdir}/qt5/*.{tags,qch}
