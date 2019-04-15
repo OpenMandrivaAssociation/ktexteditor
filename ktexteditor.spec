@@ -31,6 +31,7 @@ BuildRequires: cmake(KF5Sonnet)
 BuildRequires: cmake(KF5XmlGui)
 BuildRequires: cmake(KF5SyntaxHighlighting)
 # For QCH format docs
+BuildRequires: doxygen
 BuildRequires: qt5-assistant
 
 %description
