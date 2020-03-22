@@ -8,6 +8,7 @@ Name: ktexteditor5
 Version: 5.68.0
 Release: 2
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/ktexteditor-%{version}.tar.xz
+Patch0: ktexteditor-5.68-qt-5.15.patch
 Summary: Advanced embeddable text editor
 URL: http://kde.org/
 License: GPL
@@ -63,7 +64,7 @@ Suggests: %{devname} = %{EVRD}
 Developer documentation for %{name} for use with Qt Assistant
 
 %prep
-%setup -qn ktexteditor-%{version}
+%autosetup -p1 -n ktexteditor-%{version}
 %cmake_kde5
 
 %build

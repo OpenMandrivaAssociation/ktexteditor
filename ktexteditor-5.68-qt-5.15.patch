@@ -1,0 +1,11 @@
+diff -up ktexteditor-5.68.0/src/schema/katecategorydrawer.cpp.omv~ ktexteditor-5.68.0/src/schema/katecategorydrawer.cpp
+--- ktexteditor-5.68.0/src/schema/katecategorydrawer.cpp.omv~	2020-03-22 16:13:45.822184209 +0100
++++ ktexteditor-5.68.0/src/schema/katecategorydrawer.cpp	2020-03-22 16:13:53.328101172 +0100
+@@ -23,6 +23,7 @@
+ 
+ #include <QApplication>
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QStyleOption>
+ 
+ KateCategoryDrawer::KateCategoryDrawer()
