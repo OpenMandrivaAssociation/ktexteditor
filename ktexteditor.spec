@@ -5,10 +5,9 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: ktexteditor5
-Version: 5.68.0
-Release: 2
+Version: 5.69.0
+Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/ktexteditor-%{version}.tar.xz
-Patch0: ktexteditor-5.68-qt-5.15.patch
 Summary: Advanced embeddable text editor
 URL: http://kde.org/
 License: GPL
