@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: ktexteditor5
-Version: 5.70.0
+Version: 5.70.1
 Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/ktexteditor-%{version}.tar.xz
 Summary: Advanced embeddable text editor
@@ -87,8 +87,7 @@ Developer documentation for %{name} for use with Qt Assistant
 %{_datadir}/kdevappwizard/templates/*
 
 %files -n %{libname}
-%{_libdir}/*.so.%{major}
-%{_libdir}/*.so.%{version}
+%{_libdir}/*.so.%{major}*
 
 %files -n %{devname}
 %{_includedir}/*
