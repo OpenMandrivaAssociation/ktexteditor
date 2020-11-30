@@ -6,7 +6,7 @@
 
 Name: ktexteditor5
 Version: 5.76.0
-Release: 2
+Release: 3
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/ktexteditor-%{version}.tar.xz
 Summary: Advanced embeddable text editor
 URL: http://kde.org/
@@ -84,6 +84,7 @@ Developer documentation for %{name} for use with Qt Assistant
 %{_libdir}/libexec/kauth/kauth_ktexteditor_helper
 %{_datadir}/dbus-1/system-services/org.kde.ktexteditor.katetextbuffer.service
 %{_datadir}/kdevappwizard/templates/*
+%{_datadir}/polkit-1/actions/org.kde.ktexteditor.katetextbuffer.policy
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}*
