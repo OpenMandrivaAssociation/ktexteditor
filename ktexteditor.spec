@@ -1,12 +1,11 @@
 %define major 5
 %define libname %mklibname KF5Texteditor %{major}
 %define devname %mklibname KF5Texteditor -d
-#define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: ktexteditor5
-Version: 5.81.0
-Release: 2
+Version: 5.82.0
+Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/ktexteditor-%{version}.tar.xz
 Summary: Advanced embeddable text editor
 URL: http://kde.org/
