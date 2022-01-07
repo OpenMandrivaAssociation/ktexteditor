@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: ktexteditor5
-Version: 5.89.0
+Version: 5.90.0
 Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/ktexteditor-%{version}.tar.xz
 Summary: Advanced embeddable text editor
@@ -82,8 +82,8 @@ Developer documentation for %{name} for use with Qt Assistant
 %{_datadir}/dbus-1/system.d/org.kde.ktexteditor.katetextbuffer.conf
 %{_libdir}/libexec/kauth/kauth_ktexteditor_helper
 %{_datadir}/dbus-1/system-services/org.kde.ktexteditor.katetextbuffer.service
-%{_datadir}/kdevappwizard/templates/*
 %{_datadir}/polkit-1/actions/org.kde.ktexteditor.katetextbuffer.policy
+%{_datadir}/kdevfiletemplates/templates/ktexteditor-plugin.tar.bz2
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}*
