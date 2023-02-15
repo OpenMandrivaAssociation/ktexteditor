@@ -5,7 +5,7 @@
 
 Name: ktexteditor5
 Version: 5.103.0
-Release: 1
+Release: 2
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/ktexteditor-%{version}.tar.xz
 Summary: Advanced embeddable text editor
 URL: http://kde.org/
@@ -17,6 +17,7 @@ BuildRequires: pkgconfig(Qt5Script)
 BuildRequires: pkgconfig(Qt5XmlPatterns)
 BuildRequires: pkgconfig(Qt5Test)
 BuildRequires: pkgconfig(libgit2) >= 0.26.0
+BuildRequires: pkgconfig(editorconfig)
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(KF5Archive)
@@ -59,7 +60,7 @@ Group: Documentation
 Suggests: %{devname} = %{EVRD}
 
 %description -n %{name}-devel-docs
-Developer documentation for %{name} for use with Qt Assistant
+Developer documentation for %{name} for use with Qt Assistant.
 
 %prep
 %autosetup -p1 -n ktexteditor-%{version}
